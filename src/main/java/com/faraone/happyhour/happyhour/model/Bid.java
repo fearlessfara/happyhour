@@ -1,11 +1,21 @@
 package com.faraone.happyhour.happyhour.model;
 
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
+@Entity
 public class Bid {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column
     private Double amount;
+    @Column
     private LocalDateTime timestamp;
+
+    public Bid(){
+        //hibernate
+    }
 
     public Long getId() {
         return id;

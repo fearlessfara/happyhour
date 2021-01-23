@@ -1,14 +1,26 @@
 package com.faraone.happyhour.happyhour.model;
 
-import java.time.LocalDateTime;
+import javax.persistence.*;
 
+@Entity
 public class Item {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column
     private String name;
-    private byte[] picture;
+
+    //lazy initialize this, or ram will go brrrrt
+    @OneToOne
+    private Image image;
+    @Column
     private String size;
+    @Column
     private String description;
+
+    public Item(){
+        //hibernate
+    }
 
     public long getId() {
         return id;
@@ -26,12 +38,12 @@ public class Item {
         this.name = name;
     }
 
-    public byte[] getPicture() {
-        return picture;
+    public Image getImage() {
+        return image;
     }
 
-    public void setPicture(byte[] picture) {
-        this.picture = picture;
+    public void setImage(Image image) {
+        this.image = image;
     }
 
     public String getSize() {

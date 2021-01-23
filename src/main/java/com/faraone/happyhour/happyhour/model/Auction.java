@@ -1,17 +1,37 @@
 package com.faraone.happyhour.happyhour.model;
 
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Entity
 public class Auction {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column
+    private String name;
+    @OneToOne
     private Item item;
-    private LocalDateTime start;
-    private LocalDateTime end;
-    private List<User> participants;
+    @Column
     private String description;
+    @Column
+    private LocalDateTime start;
+    @Column
+    private LocalDateTime end;
+    @ManyToMany
+    private List<User> participants;
+    @ManyToMany
     private List<Bid> bids;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public Long getId() {
         return id;
