@@ -1,4 +1,4 @@
-package com.faraone.happyhour.happyhour.service;
+package com.faraone.happyhour.happyhour.service.interfaces;
 
 import com.faraone.happyhour.happyhour.dto.BidResponseDTO;
 import org.springframework.stereotype.Service;

@@ -1,12 +1,13 @@
-package com.faraone.happyhour.happyhour.service;
+package com.faraone.happyhour.happyhour.service.implementation;
 
 import com.faraone.happyhour.happyhour.dto.ItemListRequestDTO;
 import com.faraone.happyhour.happyhour.dto.ItemListResponseDTO;
 import com.faraone.happyhour.happyhour.dto.ItemRequestDTO;
+import com.faraone.happyhour.happyhour.service.interfaces.ItemService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DefaultItemService implements ItemService{
+public class DefaultItemService implements ItemService {
     @Override
     public ItemRequestDTO saveItem(ItemRequestDTO itemRequestDTO) {
         return null;

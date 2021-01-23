@@ -4,10 +4,10 @@ import com.faraone.happyhour.happyhour.model.Image;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ImageRepository extends JpaRepository<Image, Long> {
-     void deleteImageById(Long id);
+    void deleteImageById(Long id);
 
-    public class Projection{
-        interface ImageId{
+    class Projection {
+        interface ImageId {
             Long getId();
         }
     }

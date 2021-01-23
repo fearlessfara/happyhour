@@ -1,11 +1,11 @@
-package com.faraone.happyhour.happyhour.service;
+package com.faraone.happyhour.happyhour.service.interfaces;
 
 import com.faraone.happyhour.happyhour.dto.AuctionRequestDTO;
 import com.faraone.happyhour.happyhour.dto.AuctionResponseDTO;
 import org.springframework.stereotype.Service;
 
 @Service
-public interface AuctionService{
+public interface AuctionService {
 
     AuctionResponseDTO newAuction(AuctionRequestDTO auctionRequestDTO);
 

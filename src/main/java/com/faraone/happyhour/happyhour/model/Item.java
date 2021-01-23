@@ -18,7 +18,7 @@ public class Item {
     @Column
     private String description;
 
-    public Item(){
+    public Item() {
         //hibernate
     }
 

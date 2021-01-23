@@ -13,7 +13,7 @@ public class Bid {
     @Column
     private LocalDateTime timestamp;
 
-    public Bid(){
+    public Bid() {
         //hibernate
     }
 

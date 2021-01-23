@@ -23,7 +23,7 @@ public class User {
     @Column
     private String phoneNumber;
 
-    public User(){
+    public User() {
         //hibernate
     }
 

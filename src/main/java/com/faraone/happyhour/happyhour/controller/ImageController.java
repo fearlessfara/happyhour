@@ -1,7 +1,7 @@
 package com.faraone.happyhour.happyhour.controller;
 
 import com.faraone.happyhour.happyhour.model.Image;
-import com.faraone.happyhour.happyhour.service.ImageService;
+import com.faraone.happyhour.happyhour.service.interfaces.ImageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.RequestEntity;
@@ -23,7 +23,6 @@ public class ImageController {
     public Image getImage(@PathVariable("id") Long id) {
         return imageService.getImage(id);
     }
-
 
 
     @PostMapping("/upload")
