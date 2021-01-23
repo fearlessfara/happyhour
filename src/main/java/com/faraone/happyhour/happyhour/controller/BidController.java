@@ -15,7 +15,7 @@ public class BidController {
     @Autowired
     BidService bidService;
 
-    @PostMapping("place")
+    @PostMapping("/place")
     public BidResponseDTO placeBid(BidRequestDTO bidRequestDTO) {
         return bidService.placeBid(bidService);
     }
